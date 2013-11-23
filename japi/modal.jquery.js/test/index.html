@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery.modal</title>
+	<script type="text/javascript" src="jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="../jquery.modal-lite.0.6.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("button.btn1").click(function() {
+				$("#demo").modal({
+					panelCss: {
+						'backgroundColor': 'white',
+						'padding': '12px'
+					}
+				});
+			});
+			
+			$("button.btn2").click(function() {
+				$.modal({
+					html: $('input').val(),
+					panelCss: {
+						'backgroundColor': 'white',
+						'padding': '12px'
+					}
+				});
+			});
+		});
+	</script>
+	<style type="text/css">
+		body {
+			font-family: Arial;
+		}
+		
+		div#demo {
+			padding:12px;
+			border:1px gray dotted;
+			display:table;
+		}
+	</style>
+</head>
+<body>
+	<h1>Modal-lite.jquery plugin</h1>
+	<h2>Here we are. Lets test:</h2>
+	<div id="demo">This is Jquery plugin </div>
+	<button class="btn1">Click me to clone #demo!</button>
+	<br /><br />
+	
+	<input type="text" value="Hello World" />
+	<button class="btn2">Click me to use my text!</button>
+</body>
+</html>
